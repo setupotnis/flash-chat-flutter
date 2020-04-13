@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "874646046606",
+    "firebase_url": "https://flash-chat-b263f.firebaseio.com",
+    "project_id": "flash-chat-b263f",
+    "storage_bucket": "flash-chat-b263f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874646046606:android:541b37fbeda3046ab446df",
+        "android_client_info": {
+          "package_name": "co.setupotnis.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874646046606-co1l5jrttuij0kannkir8sqoi3foj8qa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYhLLqOKo-D3o9Awj9R0WIWy51iweVSsk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874646046606-co1l5jrttuij0kannkir8sqoi3foj8qa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
