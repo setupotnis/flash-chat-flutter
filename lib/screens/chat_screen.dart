@@ -14,6 +14,7 @@ class _ChatScreenState extends State<ChatScreen> {
   final _auth = FirebaseAuth.instance;
   FirebaseUser loggedInUser;
   String messageText;
+
   @override
   void initState() {
     super.initState();
@@ -31,6 +32,20 @@ class _ChatScreenState extends State<ChatScreen> {
     }
   }
 
+//  void getMessages() async {
+//    final messages = await _firestore.collection('messages').getDocuments();
+//    for (var message in messages.documents) {
+//      print(message.data);
+//    }
+//  }
+  void messagesStream() async {
+    await for (var snapshot in _firestore.collection('messages').snapshots()) {
+      for (var message in snapshot.documents) {
+        print(message.data);
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,9 +55,10 @@ class _ChatScreenState extends State<ChatScreen> {
           IconButton(
               icon: Icon(Icons.close),
               onPressed: () {
+                messagesStream();
                 //Implement logout functionality
-                _auth.signOut();
-                Navigator.pop(context);
+//                _auth.signOut();
+//                Navigator.pop(context);
               }),
         ],
         title: Text('⚡️Chat'),
